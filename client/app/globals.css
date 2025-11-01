@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+body, html {
+    background-color: #1B1A1F;
+}
+
+@theme {
+
+
+    /*MARK: Colors*/
+    --color-primary-background: #1B1A1F;
+    --color-secondary-background: #F2D28B;
+    --color-tertiary-background: #F1D28B;
+    --color-primary-accent: #222327;
+
+
+
+    /*MARK: Font Family*/
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-roboto: 'Roboto', sans-serif;
+
+
+    /*MARK: Display Breakpoints*/
+    --breakpoint-bp-1410: 1410px;
+    --breakpoint-bp-1135: 1135px;
+}
