@@ -4,7 +4,6 @@
 You can **observe, summarize, and analyze** the debate to gain a deeper understanding of any subject.  
 The app automatically provides **summarized insights, key takeaways, and a full discussion report** — helping users learn faster and more effectively.
 
----
 
 ## 🚀 Features
 
@@ -15,7 +14,6 @@ The app automatically provides **summarized insights, key takeaways, and a full 
 - 🧠 **Interactive Learning** — Learn through reasoning, contrast, and multi-perspective understanding.  
 - 💾 **Persistent Storage** — Save and revisit your favorite AI debates anytime.
 
----
 
 ## 🛠️ Tech Stack
 
@@ -30,5 +28,3 @@ The app automatically provides **summarized insights, key takeaways, and a full 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
-
----
