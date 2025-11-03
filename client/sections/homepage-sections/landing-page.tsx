@@ -28,7 +28,6 @@ export default function LandingPage(): React.JSX.Element {
             textColor: "text-black",
             customRounding: "rounded-[10rem]",
             customStyling: "flex flex-col items-center justify-center",
-            customRoundingAnimation: "7rem",
             content: <React.Fragment>
                 <motion.div
                     animate={{
@@ -371,7 +370,8 @@ export default function LandingPage(): React.JSX.Element {
 
             {/*MARK: Second Half*/}
 
-            <div className={"h-full flex-1 hidden md:flex justify-center items-center !mt-[2rem]"}>
+            <motion.div
+                className={"h-full flex-1 hidden md:flex justify-center items-center !mt-[2rem]"}>
 
                 <div className={"grid grid-cols-2 grid-rows-3 gap-[0.25rem]"}>
                     {
@@ -395,9 +395,6 @@ export default function LandingPage(): React.JSX.Element {
                                             ease: [0.83, 0, 0.17, 1]
                                         }
                                     }}
-                                    whileHover={{
-                                        borderRadius: "5rem"
-                                    }}
                                     className={twMerge(item.backgroundColor, item.textColor, item.customStyling, "bp-1410:h-[14rem] bp-1410:w-[18rem] w-[15rem] h-[12rem] !p-[2rem] relative overflow-hidden rounded-2xl")}
                                     key={index}>
                                     {item.content}
@@ -413,7 +410,7 @@ export default function LandingPage(): React.JSX.Element {
                         })
                     }
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

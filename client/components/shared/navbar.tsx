@@ -1,11 +1,14 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll, useTransform, useSpring} from "framer-motion";
 import {IoArrowUp} from "react-icons/io5";
 import {TbBrain} from "react-icons/tb";
+import {SPRING_OPTIONS} from "@/constants/animation-constants";
+
+
+const NAVBAR_SCROLL_THRESHOLD = 300;
 
 export default function Navbar(): React.JSX.Element {
 
-    const [isHidden, setIsHidden] = React.useState(false);
 
     const navbarOptions: Array<{ name: string; link: string; }> = [
         {name: "Start Learning", link: "/chat"},
@@ -13,6 +16,17 @@ export default function Navbar(): React.JSX.Element {
         {name: "Reviews", link: "/reviews"},
         {name: "About", link: "/about"},
     ];
+    return (
+        <React.Fragment>
+            <FullFunctionalNavbar navbarOptions={navbarOptions}/>
+        </React.Fragment>
+    )
+}
+
+function FullFunctionalNavbar({navbarOptions}: {
+    navbarOptions: Array<{ name: string; link: string; }>
+}): React.JSX.Element {
+
     return (
         <motion.header
             variants={{
@@ -30,9 +44,9 @@ export default function Navbar(): React.JSX.Element {
                 y: "-150%"
             }}
             transition={{
-               duration: 1.25,
+                duration: 1.25,
                 delay: 0.5,
-               ease: [0.85, 0, 0.15, 1],
+                ease: [0.85, 0, 0.15, 1],
             }}
             className={"fixed top-[1.5rem] left-1/2 -translate-x-1/2 !p-[0.75rem] text-white w-[calc(100vw-3rem)] bg-white/10 backdrop-blur-2xl rounded-full flex justify-between items-center z-[12]"}>
 
@@ -40,7 +54,8 @@ export default function Navbar(): React.JSX.Element {
             <div className={"flex gap-[5rem] items-center"}>
                 {/*MARK: Name and Logo*/}
                 <span className={"flex gap-[1rem] items-center"}>
-                    <div className={"h-[40px] aspect-square bg-secondary-background rounded-full flex justify-center items-center"}>
+                    <div
+                        className={"h-[40px] aspect-square bg-secondary-background rounded-full flex justify-center items-center"}>
                         <TbBrain size={30} className={"text-black"}/>
                     </div>
                     <h1 className={"font-family-montserrat font-bold uppercase text-[1.2rem]"}>Arg.AI</h1>
