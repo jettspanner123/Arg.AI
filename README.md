@@ -2,14 +2,14 @@
 
 <div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js-16.0.7-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Hono](https://img.shields.io/badge/Hono-4.10.7-FF6B6B?style=for-the-badge&logo=hono&logoColor=white)
-![Bun](https://img.shields.io/badge/Bun-Latest-FBF0DF?style=for-the-badge&logo=bun&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-7.1.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-16.0.7-000000?style=for-the-badge&logo=next.js&logoColor=white&labelColor=000000&color=FF007F)
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=61DAFB&color=00D9FF)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=3178C6&color=007ACC)
+![Hono](https://img.shields.io/badge/Hono-4.10.7-FF6B6B?style=for-the-badge&logo=hono&logoColor=white&labelColor=FF6B6B&color=FF1744)
+![Bun](https://img.shields.io/badge/Bun-Latest-FBF0DF?style=for-the-badge&logo=bun&logoColor=000000&labelColor=FBF0DF&color=FFA500)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-336791?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=336791&color=008BB9)
+![Prisma](https://img.shields.io/badge/Prisma-7.1.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white&labelColor=2D3748&color=00D9FF)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white&labelColor=38B2AC&color=06B6D4)
 
 </div>
 
