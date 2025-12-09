@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/db/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum DeletionStatus {
+  NOT_DELETED
+  SOFT_DELETED
+}
+
+enum ChatStatus {
+  NOT_STARTED
+  ENDED
+  ACTIVE
+}
+
+model Personality {
+  id          String @id @default(cuid())
+  name        String
+  description String
+
+  fromChats Chats[] @relation("FromPersonality")
+  toChats   Chats[] @relation("ToPersonality")
+}
+
+model Content {
+  id        String   @id
+  data      String
+  createdAt DateTime @default(now())
+  chats     Chats?   @relation(fields: [chatsId], references: [id])
+  chatsId   String?
+}
+
+model Chats {
+  id String @id @default(cuid())
+
+  fromId String
+  from   Personality @relation("FromPersonality", fields: [fromId], references: [id], map: "AI_CHAT_FROM")
+
+  toId String
+  to   Personality @relation("ToPersonality", fields: [fromId], references: [id], map: "AI_CHAT_TO")
+
+  content Content[]
+
+  createdAt DateTime @default(now())
+
+  user   User?   @relation(fields: [userId], references: [id], map: "AI_USER")
+  userId String?
+}
+
+model Summerization {
+  id      String @id @default(cuid())
+  title   String
+  content String
+
+  createdAt DateTime @default(now())
+
+  deletionStatus DeletionStatus @default(NOT_DELETED)
+  deleatedAt     DateTime?
+
+  user   User?   @relation(fields: [userId], references: [id])
+  userId String?
+}
+
+model Session {
+  id String @id @default(cuid())
+
+  token    String   @unique
+  exiresAt DateTime
+
+  createdAt DateTime @default(now())
+
+  user   User?   @relation(fields: [userId], references: [id])
+  userId String?
+}
+
+model User {
+  id        String  @id @default(cuid())
+  username  String  @unique
+  email     String  @unique
+  firstName String
+  lastName  String?
+  password  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  deletionStatus DeletionStatus @default(NOT_DELETED)
+  deletedAt      DateTime?
+
+  savedChats         Chats[]
+  savedSummerization Summerization[]
+
+  sessions Session[]
+}
