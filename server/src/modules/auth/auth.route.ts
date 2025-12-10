@@ -20,8 +20,8 @@ authRouter.post(
 authRouter.post(
     "/login",
     LOGIN_VALIDATOR as unknown as MiddlewareHandler,
-    AuthController.login
-)
+    AuthController.login,
+);
 
 // Logout User
 authRouter.post("/logout", AUTH_MIDDLEWARE, AuthController.logout);
